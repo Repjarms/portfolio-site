@@ -5,7 +5,7 @@
       <h3>{{title}}</h3>
       <p>{{description}}</p>
       <ul class="project_linklist">
-        <li><a href="#">Github</a></li>
+        <li><a href="#">View Repo</a></li>
         <li><a href="#">View App</a></li>
       </ul>
     </div>
@@ -67,8 +67,44 @@ export default {
 
   li {
     margin: 0.5em;
-    border-radius: 8px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+
+    &:first-child {
+      background: $gray-20;
+      border: 1px solid $gray-20;
+
+      a {
+        color: white;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      background: $teal;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .project {
+    flex-direction: column;
+  }
+
+  .project_image {
+    order: 0 !important;
+  }
+
+  .project_details {
+    order: 1 !important;
+  }
+
+  .project_linklist {
+
+    li {
+      flex: 0 1 100%;
+    }
   }
 }
 </style>
