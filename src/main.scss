@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'colors';
 
-/* Define standard colors */
-$black: #000000;
-$gray-20: #181818;
-$gray-10: #252627;
-$white: #FFFFFF;
-$teal: #08FDD8;
-$orange: #FD4F08;
 
 html {
   font-size: 16px; // root font size
@@ -40,9 +34,32 @@ p {
 }
 
 ul {
+  padding: 0;
   list-style-type: none;
 }
 
 li {
   padding: 0.5em 1.2em;
+}
+
+li, button {
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+  outline: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@media (max-width: 680px) {
+  html {
+    font-size: 14px;
+  }
 }

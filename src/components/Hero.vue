@@ -12,12 +12,18 @@
      <h1>My Name Is Jeff Arn</h1>
      <h2>I make webapps and embedded systems</h2>
    </div>
+   <Console />
   </div>
 </template>
 
 <script>
+import Console from './ConsoleContainer';
+
 export default {
   name: 'hero',
+  components: {
+    Console,
+  },
 };
 </script>
 
@@ -28,14 +34,14 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background: $gray-10;
   color: white;
-  height: 100vh;
 }
 
 .hero_header {
   flex: 0 1 100%;
-  height: 10%;
   background: $gray-20;
 
   display: flex;
