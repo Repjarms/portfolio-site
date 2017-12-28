@@ -4,8 +4,10 @@
     <div class="project_details">
       <h3>{{title}}</h3>
       <p>{{description}}</p>
-      <div class="project_buttonlist">
-      </div>
+      <ul class="project_linklist">
+        <li><a href="#">Github</a></li>
+        <li><a href="#">View App</a></li>
+      </ul>
     </div>
   </div>
 </template>
@@ -56,5 +58,17 @@ export default {
 
 .project_details {
   flex: 0 1 50%;
+}
+
+.project_linklist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  li {
+    margin: 0.5em;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 </style>
