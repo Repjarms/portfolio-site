@@ -46,3 +46,14 @@ ul {
 li {
   padding: 0.5em 1.2em;
 }
+
+li, button {
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: none;
+  outline: none;
+}
