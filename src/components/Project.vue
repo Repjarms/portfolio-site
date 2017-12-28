@@ -37,7 +37,7 @@ export default {
   }
 
   &:nth-child(4) {
-    background: $gray-20;
+    background: $gray-10;
     color: white;
   }
 
@@ -67,6 +67,7 @@ export default {
 
   li {
     margin: 0.5em;
+    background: white;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
