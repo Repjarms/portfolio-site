@@ -1,0 +1,27 @@
+language: node_js
+group: stable
+dist: trusty
+sudo: required
+node_js: 6
+script:
+- npm test
+cache:
+  directories:
+  - node_modules
+services:
+- docker
+before_install:
+- docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+- docker build -t "$DOCKER_REPO" .
+- docker run -d -p 127.0.0.1:80:4567 "$DOCKER_REPO" /bin/sh -c "cd $APP_DIRNAME; npm
+  i; npm test"
+- docker ps -a
+env:
+  global:
+  - DOCKER_REPO: repjarms/portfolio-site
+  - APP_DIRNAME: /root/portfolio-site
+  - secure: JVAm4jgkG+77i8kE9yn+Ms9cJ/4QU8oRW08HmpGJBlAlBpL0lVA/eEkDRlVF3zE+/oZtJGZ7rpv6TpISlrAQV13CdOuy/REIfgO1Hc4iXxFE8T+Q9wTW6GOG2BkV44AQMfc/vbobGrm6Z/2M+4Qq5DMfTUXrB/GEIFRR8GxmUqcgLT7C8f6Y/5t+MKc6XcR8jTRoP1Dp3+k1lq3txbB8r4eQazKlDyTiAeKzzSBZe9PUhZipelpZKCPzQ4LP+DL5j6uWWJ1CbQDyfp1KQQDdu9tundEELIHViyEDxUEIYtJYpOauG15srwthHNYTvX0by/5nd6EHfdk2hsmGVm3U/HbKZIgGcvJx+48cV+NL59X22s9KHnIwMvSXHkddSy/vQtHASuIT7PAW4ryK+GX3NOv7d6x3Mwvj8R5IbURhWzn57S24ADrUdNuondgEPvrpS7Gc0Adzy6HWmeTYQNFicjDahujhZ3vNxYu2wQ2Uh9Qn1BlIhl1JJsTwZPdcaRbKDwn2xhgvROsMRpQkT2h1yyeyQR1U5IwdcoXOqAQzov1EbiUbO6eLyhYGcKua5ndv9zbgqg7nQOfHmH0IzWbicW2e9NkBm94TGXs75ISBhr/gKf/RduYBfwZKksS8BhfFJtmqhKzxanhUn65Z32RZ4+lQOJlxxS1n+NSUKFWiWIo=
+  - secure: U9neXIghjYdOaWVHp3aMrk4718Tw1txJKCdhlUcKLe0VPf1T+O5BGKxA2PSE6n7diamikeivPLy+K2LOK2HBwrTo9zEuov4slwhZ5/ukaP5lGojqCfrffPwGw0CAOS1MJlJHINM2LSS8yF3O+dNF2DoqqGDbk0U1tN1s43dWGHC87rBCgwpv6q+sKS/Q9EkqBQU5a1ydrIefp7sE1hK1spJuMKrgkZOB7ZJC4o5HO5rRPQWZZz/TeYZrOrfrEDftQHul+I8kyWlxCBRZM0uXxkHXFdTWRzArU+ehMFobAksB87l29vxzHzaUsphIVsyFAqaDFiu/eZUFcz8m9b11b+iCZv0HjlF0W/v9H0CKzL6rze1cLAJXTE6jDmZMwXNRnic1vxlZw3qzFqkM6cd7okRVK+BZ0gukIsLfh1iFfSmLVXolQCKvVuqQFI+lejhGBvIGow+Fk8b0x68YHJoB9yDS+47ELWQZlZfSLdClQ7HTQUGadugjxvBVYz9kKrDb7kp+YmFZ9oQpDffJtVL5/tEcMteO9bvIj3Mwqp+dgDO3QmWoD9V2h54v1qUX/IIYr+MJ9kWog6FDwnCQ+xfGtoGKcfwNdtXmOene5JBXFQo5Ar0cCxgDKb39K5tE3e9Kl4iZyeH8Nu+jCFyWUw85jCP/MwwEvusH34dzkYMexlc=
+after_success:
+- if [ "$TRAVIS_BRANCH" == "master" ]; then docker login -u "$DOCKER_USERNAME" -p
+  "$DOCKER_PASSWORD"; docker push "$DOCKER_REPO" fi
