@@ -2,16 +2,21 @@
   <div class="console">
     <p>option list placeholder</p>
     <div class="console_window">
-      <p>Console pane placeholder</p> 
-      <p>Console pane placeholder</p>
+      <ConsolePane />
+      <ConsolePane />
     </div>
   </div>
 </template>
 
 <script>
+import ConsolePane from './ConsolePane';
+
 export default {
   name: 'console',
-} 
+  components: {
+    ConsolePane,
+  },
+};
 </script>
 
 <style scoped lang="scss">
