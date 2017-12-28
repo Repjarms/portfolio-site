@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb-base",
+  "plugins": ["vue"],
+  "rules": {
+    "vue/jsx-uses-vars": 2,
+    "import/extensions": ["error", "always", {
+      "js": "never",
+      "vue": "never"
+    }]
+  }
+}

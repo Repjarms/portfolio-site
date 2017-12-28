@@ -1,0 +1,64 @@
+{
+  "name": "portfolio-site",
+  "version": "1.0.0",
+  "description": "A portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/jest/bin/jest.js . --bail",
+    "start": "node server.js",
+    "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --config ./config/webpack.config.prod.js",
+    "lint": "./node_modules/eslint/bin/eslint.js ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Repjarms/portfolio-site.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Jeff",
+    "Arn"
+  ],
+  "author": "Jeff Arn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Repjarms/portfolio-site/issues"
+  },
+  "homepage": "https://github.com/Repjarms/portfolio-site#readme",
+  "devDependencies": {
+    "babel-helper-vue-jsx-merge-props": "^2.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-transform-vue-jsx": "^3.5.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-vue": "^2.1.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-loader": "^0.5.1",
+    "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.0.4",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.9",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "stylelint": "^8.4.0",
+    "stylelint-webpack-plugin": "^0.9.0",
+    "vue-loader": "^13.6.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^2.0.3",
+    "webpack-hot-middleware": "^2.21.0",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "vue": "^2.5.13"
+  }
+}
