@@ -4,27 +4,31 @@
     "title": "A Suite of AI Powered Web Applications",
     "description": "This is the sample text for the Watson demo project. Each of these descriptions should be roughly four sentences long. Perhaps I include a line about the project itself, it's architecture, or how it was built. Hopefully the code is open-sourced so I can link to that too.",
     "githubLink": "#",
-    "appLink": "#"
+    "appLink": "#",
+    "image": "#"
   },
   {
     "id": 1,
     "title": "A Suite of AI Powered Web Applications",
     "description": "This is the sample text for the Watson demo project. Each of these descriptions should be roughly four sentences long. Perhaps I include a line about the project itself, it's architecture, or how it was built. Hopefully the code is open-sourced so I can link to that too.",
     "githubLink": "#",
-    "appLink": "#"
+    "appLink": "#",
+    "image": "#"
   },
   {
     "id": 2,
     "title": "A Suite of AI Powered Web Applications",
     "description": "This is the sample text for the Watson demo project. Each of these descriptions should be roughly four sentences long. Perhaps I include a line about the project itself, it's architecture, or how it was built. Hopefully the code is open-sourced so I can link to that too.",
     "githubLink": "#",
-    "appLink": "#"
+    "appLink": "#",
+    "image": "#"
   },
   {
     "id": 3,
     "title": "A Suite of AI Powered Web Applications",
     "description": "This is the sample text for the Watson demo project. Each of these descriptions should be roughly four sentences long. Perhaps I include a line about the project itself, it's architecture, or how it was built. Hopefully the code is open-sourced so I can link to that too.",
     "githubLink": "#",
-    "appLink": "#"
+    "appLink": "#",
+    "image": "#"
   }
 ]
